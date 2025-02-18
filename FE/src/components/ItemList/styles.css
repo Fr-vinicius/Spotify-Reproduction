@@ -1,0 +1,24 @@
+.item-list {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.item-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-list__hook {
+  color: inherit;
+  text-decoration: none;
+}
+
+.item-list__hook:hover {
+  text-decoration: underline;
+}
+
+.item-list_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}

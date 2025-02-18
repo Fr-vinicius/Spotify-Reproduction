@@ -1,0 +1,100 @@
+:root {
+  --green-50: hsl(141deg 75% 90%);
+  --green-100: hsl(141deg 75% 85%);
+  --green-200: hsl(141deg 75% 70%);
+  --green-300: hsl(141deg 75% 60%);
+  --green-400: hsl(141deg 75% 50%);
+  --green-500: hsl(141deg 75% 45%);
+  --green-600: hsl(141deg 75% 35%);
+  --green-700: hsl(141deg 75% 25%);
+  --green-800: hsl(141deg 75% 15%);
+  --green-900: hsl(141deg 75% 10%);
+  --green-950: hsl(141deg 75% 5%);
+  --green-1000: hsl(141deg 75% 2.5%);
+  --green-1000-25: hsl(141deg 75% 2.5% / 25%);
+
+  --transition-duration: 200ms;
+  --transition-function: ease;
+
+  --border-radius-s: 5px;
+  --border-radius-m: 10px;
+  --border-radius-l: 15px;
+}
+
+.single-item__icon {
+  position: absolute;
+  font-size: 50px;
+  right: 7.5px;
+  bottom: 7.5px;
+  color: var(--green-400);
+  opacity: 0;
+  transform: translateY(100%);
+  transition-timing-function: ease;
+  transition-duration: 200ms;
+  transition-property: opacity, transform;
+}
+
+.single-item__icon--artist {
+  position: fixed;
+  opacity: 1;
+  transform: translateY(0);
+  right: 25px;
+  bottom: 25px;
+}
+
+.artist {
+  border-radius: var(--border-radius-l);
+  margin: 0 10px 10px;
+  overflow: hidden;
+}
+
+.artist__header {
+  --_shade: hsl(0deg 0% 0% / 25%);
+
+  display: flex;
+  align-items: end;
+  padding: 25px;
+  height: 40svh;
+  background-size: cover;
+  background-position-y: 20%;
+  background-image: linear-gradient(to bottom, var(--_shade), var(--_shade)),
+    url(https://i.scdn.co/image/ab67618600001016909a162796dbc3629a1fadeb);
+}
+
+.artist__title {
+  font-size: 96px;
+}
+
+.artist__body {
+  padding: 39px 25px;
+  background-image: linear-gradient(
+    to bottom,
+    var(--green-900),
+    var(--green-950)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (max-width: 1280px) {
+  .artist__title {
+    font-size: 7.5vw;
+    line-height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .artist__title {
+    font-size: 36px;
+  }
+
+  .artist__header {
+    padding: 16px;
+  }
+
+  .artist__body {
+    padding: 25px 16px;
+    gap: 16px;
+  }
+}
